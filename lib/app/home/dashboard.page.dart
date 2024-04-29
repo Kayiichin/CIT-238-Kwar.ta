@@ -130,7 +130,7 @@ class _DashboardPageState extends State<DashboardPage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Welcome again!",
+                                      'Welcome again!',
                                       style: Theme.of(context)
                                           .textTheme
                                           .bodyMedium!

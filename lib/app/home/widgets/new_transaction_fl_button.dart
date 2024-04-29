@@ -22,7 +22,7 @@ class NewTransactionButton extends StatelessWidget {
     ).then((value) {
       if (value != true) return;
 
-      RouteUtils.pushRoute(context, AccountFormPage());
+      RouteUtils.pushRoute(context, const AccountFormPage());
     });
   }
 
@@ -34,7 +34,7 @@ class NewTransactionButton extends StatelessWidget {
       if (!value) {
         _showShouldCreateAccountWarn(context);
       } else {
-        RouteUtils.pushRoute(context, TransactionFormPage());
+        RouteUtils.pushRoute(context, const TransactionFormPage());
       }
     });
   }
@@ -51,7 +51,7 @@ class NewTransactionButton extends StatelessWidget {
     }
 
     return FloatingActionButton(
-      heroTag: "new-transaction-floating-button",
+      heroTag: 'new-transaction-floating-button',
       tooltip: t.transaction.create,
       onPressed: () => _onPressed(context),
       child: const Icon(Icons.add_rounded),
