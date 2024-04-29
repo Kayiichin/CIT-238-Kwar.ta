@@ -3,10 +3,8 @@ import 'package:monekin/app/accounts/all_accounts_page.dart';
 import 'package:monekin/app/budgets/budgets_page.dart';
 import 'package:monekin/app/categories/categories_list.dart';
 import 'package:monekin/app/currencies/currency_manager.dart';
-import 'package:monekin/app/settings/about_page.dart';
 import 'package:monekin/app/settings/appearance_settings_page.dart';
 import 'package:monekin/app/settings/backup_settings_page.dart';
-import 'package:monekin/app/settings/help_us_page.dart';
 import 'package:monekin/app/settings/widgets/setting_card_item.dart';
 import 'package:monekin/app/stats/stats_page.dart';
 import 'package:monekin/app/tags/tag_list.page.dart';
@@ -37,14 +35,7 @@ class _SettingsPageState extends State<SettingsPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SettingCardItem(
-                isPrimary: true,
-                title: t.more.help_us.display,
-                subtitle: t.more.help_us.description,
-                icon: Icons.favorite_rounded,
-                mainAxis: Axis.horizontal,
-                onTap: () => RouteUtils.pushRoute(context, const HelpUsPage()),
-              ),
+      
               const SizedBox(height: 8),
               SettingCardItem(
                 title: t.settings.title_long,
@@ -71,14 +62,6 @@ class _SettingsPageState extends State<SettingsPage> {
                 mainAxis: Axis.horizontal,
                 onTap: () =>
                     RouteUtils.pushRoute(context, const BackupSettingsPage()),
-              ),
-              const SizedBox(height: 8),
-              SettingCardItem(
-                title: t.more.about_us.display,
-                subtitle: t.more.about_us.description,
-                icon: Icons.info_outline_rounded,
-                mainAxis: Axis.horizontal,
-                onTap: () => RouteUtils.pushRoute(context, const AboutPage()),
               ),
               if (BreakPoint.of(context).isSmallerThan(BreakpointID.md)) ...[
                 const SizedBox(height: 8),
